@@ -1,0 +1,55 @@
+Question:
+Suppose you have a CSV file with the data below.
+ 
+A1: 5, A2: 7, A3: 9, B1: 3, B2: 8, B3: =4+5, C1: =5+A1, C2: =A2+B2, C3: =C2+B3
+ 
+This can be represented in an excel sheet below:
+
+A B C
+
+1 5 3 =5+A1
+
+2 7 8 =A2+B2
+
+3 9 =4+5 =C2+B3
+ 
+I want a program that will take the CSV input above and produce CSV output
+ with the results.  If it is a value, then return a value.  
+ If it is a formula then calculate the formula and return the value of that formula.
+
+Answers:
+
+1. How will you tackle the challenge above?
+To solve any problem I will first of all divide the problem into sub-problem and then I will solve that sub-problems first.
+
+Below steps I will follow.
+
+Step1: I will create a filename.csv file to store the data.
+
+Step2: Then I will put all the whole input data inside a String.
+
+Step3: As CSV full form is Comma Separated Value. So first of all I will split that String by "," which will provide me array of Strings.
+
+Step4: Then, After that I will create one Map of Map<String,String>
+
+Step5: After creating Map I will again split each String by ":" which will provide me String array of size 2.
+
+Step6: Then I will insert that String inside map before ":" value as a Key and after ":" value as a Value.
+
+Step7: After putting all inside Map then I can check weather map contains all values by using Character class.
+
+Step8: If my map contains any formula then I will calculate that answer and again store the answer in another Map which I will create as Map<String,Integer>.
+
+Step9: Then finally after doing all the operation my Map<String,Integer> contains all the result data Key as cell information and Value as a result for that cell.
+
+
+2. What type of errors you would you check for?
+Some basics error I need to check as below:
+Input might be null/empty String.
+While parsing the data I might get parsing Error.
+In some cases I might get Integer overflow error if our input Integer values are so big. 
+
+3. How might a user break your code?
+As I have taken care of all parameters like invalid input and all.
+Still user can break my code by changing file type.
+Also If file contains some long data then I might get Integer overflow.  

@@ -1,0 +1,17 @@
+Question: what are the key things you would consider when creating/consuming an API to ensure that it is secure and reliable?
+
+Answer: 
+There are some things that we need to follow which are as follows.
+
+Authentication: We need to provide some authentication while building API like this. To secure our data as we are using open
+API to get all the data.
+
+Authorization: Also we need to check weather the user is authorized or not.
+
+Encryption: We need to encrypt some important data such as password while persisting it in database.
+
+Validation: We have to provide some validation to our entity objects to avoid unnecessary load/transaction to database.
+
+Exception: We need to create some user defined exceptions so that we can send proper message to the user/client after getting an error. 
+
+Structure: We have to some structure while building an API so that anyone can understand our code.
