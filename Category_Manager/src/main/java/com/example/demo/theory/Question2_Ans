@@ -24,7 +24,7 @@ To solve any problem I will first of all divide the problem into sub-problem and
 
 Below steps I will follow.
 
-Step1: I will create a filename.csv file to store the data.
+Step1: I will read all the data from given CSV file by using BufferedReader.
 
 Step2: Then I will put all the whole input data inside a String.
 
